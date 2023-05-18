@@ -60,9 +60,9 @@ const NavBar = () => {
             <div className="navbar-end">
                 {user?.email ?
                     <>
-                        <div className="w-24 rounded-full">
-                            {user.photoURL ? <img src={user.photoURL} /> : <></>}
-                        </div>
+                        {user?.photoURL ? <div className="w-12 tooltip-bottom tooltip mx-1 px-0 " data-tip={user?.displayName}>
+                            <img className='rounded-full' src={user.photoURL} />
+                        </div> : <></>}
                         <button onClick={handleSignOut} className="lg:btn-md btn btn-xs login">LogOut</button>
                     </>
                     : <Link to='/login' className="lg:btn-md btn btn-xs login">Login</Link>
