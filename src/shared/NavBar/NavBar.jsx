@@ -23,10 +23,10 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className='flex gap-1 items-center justify-center'>
-                    <div className='w-8 lg:w-16 mask mask-squircle'><img className='' src={logo} alt="" /></div>
+                    <div className='w-12 lg:w-16 mask mask-squircle'><img className='' src={logo} alt="" /></div>
                     <div>
-                    <Link to='/' className="font-bold px-0 normal-case text-base lg:text-xl">Turbo<span className='text-[#ff1276] text-2xl font-extrabold'>Sporty</span></Link>
-                    <p className='py-0 my-0 text-base-200 text-sm'><small>Unleash your inner champion</small></p>
+                    <Link to='/' className="font-bold px-0 normal-case text-base lg:text-xl">Turbo<span className='text-[#ff1276] lg:text-2xl font-extrabold'>Sporty</span></Link>
+                    <p className='py-0 my-0 text-base-200 lg:text-sm text-xs'><small>Unleash your inner champion</small></p>
                     </div>
                 </div>
             </div>

@@ -5,7 +5,7 @@ import banner4 from '../../../assets/banner-4.jpg';
 import './Header.css';
 const Header = () => {
     return (
-        <div className="carousel  mx-24 my-10 h-[500px] ">
+        <div className="carousel  lg:mx-24 my-10 lg:h-[500px] ">
             <div id="slide1" className="carousel-item relative w-full ">
                 <img src={banner1} className="w-full rounded-xl" />
                 <div className="absolute rounded-xl flex items-center h-full w-full py-auto bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
