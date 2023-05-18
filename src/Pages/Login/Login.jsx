@@ -10,19 +10,19 @@ const Login = () => {
             </div>
             <div className="w-1/2 mx-auto py-8 px-20 shadow-2xl my-20">      
                 <div className="card-body ">
-                <form>
+                <form >
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="text" placeholder="email" className="input input-bordered" />
+                        <input type="text" name="email" placeholder="Your Email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
                         <div className="relative w-3/4 lg:w-full">
-                            <input type="password" placeholder="" className="input input-bordered w-full pr-16" />
+                            <input type="password" name="password" placeholder="Password" className="input input-bordered w-full pr-16" required />
                             <button className="btn login absolute top-0 right-0 rounded-l-none">Show</button>
                         </div>
                         <label className="label">
