@@ -4,13 +4,16 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+console.log(import.meta.env.VITE_PROJECTID);
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDXx2_05Xo2S4vyFTnqueVKAlkpCtxzAGY",
-  authDomain: "turbo-sporty-toy.firebaseapp.com",
-  projectId: "turbo-sporty-toy",
-  storageBucket: "turbo-sporty-toy.appspot.com",
-  messagingSenderId: "37471781984",
-  appId: "1:37471781984:web:2ff99df6f38362f1486f05"
+    apiKey: import.meta.env.VITE_APIKEY,
+    authDomain: import.meta.env.VITE_AUTHDOMAIN,
+    projectId: import.meta.env.VITE_PROJECTID,
+    storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+    appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase

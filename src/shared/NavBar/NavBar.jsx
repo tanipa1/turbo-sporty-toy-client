@@ -1,15 +1,37 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/sport18.jpg';
 import './NavBar.css';
+import { useContext } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const NavBar = () => {
+    const { user, logOut } = useContext(AuthContext)
     const navItem = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/blog'>Blogs</Link></li>
-        <li><Link to='/allToys'>All Toys</Link></li>
-        <li><Link to='/myToys'>My Toys</Link></li>
-        <li><Link to='/addToys'>Add A Toy</Link></li>
-        </>
+        {user?.email ?
+            <>
+                <li><Link to='/allToys'>All Toys</Link></li>
+                <li><Link to='/myToys'>My Toys</Link></li>
+                <li><Link to='/addToys'>Add A Toy</Link></li>
+            </> : <></>
+        }
+    </>;
+
+    const handleSignOut = () => {
+        logOut()
+            .then(() => {
+                Swal.fire({
+                    title: 'LogOut :(',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                })
+            })
+            .then(error => {
+                console.log(error);
+            })
+    }
 
     return (
         <div className="navbar text-white font-semibold lg:px-24 bg-[#01b0ed]">
@@ -25,8 +47,8 @@ const NavBar = () => {
                 <div className='flex gap-1 items-center justify-center'>
                     <div className='w-12 lg:w-16 mask mask-squircle'><img className='' src={logo} alt="" /></div>
                     <div>
-                    <Link to='/' className="font-bold px-0 normal-case text-base lg:text-xl">Turbo<span className='text-[#ff1276] lg:text-2xl font-extrabold'>Sporty</span></Link>
-                    <p className='py-0 my-0 text-base-200 lg:text-sm text-xs'><small>Unleash your inner champion</small></p>
+                        <Link to='/' className="font-bold px-0 normal-case text-base lg:text-xl">Turbo<span className='text-[#ff1276] lg:text-2xl font-extrabold'>Sporty</span></Link>
+                        <p className='py-0 my-0 text-base-200 lg:text-sm text-xs'><small>Unleash your inner champion</small></p>
                     </div>
                 </div>
             </div>
@@ -36,7 +58,15 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/login' className="lg:btn-md btn btn-xs login">Login</Link>
+                {user?.email ?
+                    <>
+                        <div className="w-24 rounded-full">
+                            {user.photoURL ? <img src={user.photoURL} /> : <></>}
+                        </div>
+                        <button onClick={handleSignOut} className="lg:btn-md btn btn-xs login">LogOut</button>
+                    </>
+                    : <Link to='/login' className="lg:btn-md btn btn-xs login">Login</Link>
+                }
             </div>
         </div>
     );
