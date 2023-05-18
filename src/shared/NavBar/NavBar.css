@@ -1,0 +1,11 @@
+.login{
+    background-color: #ff1276;
+    border: 0px;
+}
+.login:hover{
+    background-color: #ffedb3;
+    color: black;
+}
+    .navbar{
+        border-radius: 0% 0% 10% 10%;
+    }
