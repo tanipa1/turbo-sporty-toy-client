@@ -6,7 +6,7 @@ const Blog = () => {
             {/* Banner */}
             <div>
                 <div className="banner w-full bg-repeat-x bg-center h-48">
-                    <div className="absolute flex items-center h-48 w-full py-auto bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
+                    <div className="ovarlay-sec absolute flex items-center h-48 w-full py-auto bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
                         <h1 className='font-extrabold text-3xl lg:text-5xl flex mx-auto text-center text-white'>BLOGS</h1>
                     </div>
                 </div>
