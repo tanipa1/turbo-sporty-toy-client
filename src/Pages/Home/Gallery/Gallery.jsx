@@ -9,11 +9,11 @@ import './Gallery.css';
 const Gallery = () => {
     return (
         <div>
-            <div className="text-center">
+            <div className="text-center mt-12">
                 <h2 className="text-3xl ">Our <span className="text-[#ff1276]">Gallery</span></h2>
                 <p>A gallery of playfulness and joy</p>
 
-                <div className='my-16 lg:mx-44 grid justify-center lg:grid-cols-3 gap-3'>
+                <div className='my-8 lg:mx-44 grid justify-center lg:grid-cols-3 gap-3'>
 
                     <div className="image-container mask mask-squircle m-0">
                         <img src={gallery1} className="max-w-sm  shadow-2xl" />
