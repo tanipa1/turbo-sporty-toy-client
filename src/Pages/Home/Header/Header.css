@@ -1,0 +1,8 @@
+.arrow{
+    background-color: #01b0ed;
+    border: 3px solid white;
+}
+.arrow:hover{
+    background-color: #ff1276;
+    border: 3px solid white;
+}
