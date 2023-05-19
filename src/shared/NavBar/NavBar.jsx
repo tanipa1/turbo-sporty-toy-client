@@ -10,13 +10,9 @@ const NavBar = () => {
     const navItem = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/blog'>Blogs</Link></li>
-        {user?.email ?
-            <>
-                <li><Link to='/allToys'>All Toys</Link></li>
-                <li><Link to='/myToys'>My Toys</Link></li>
-                <li><Link to='/addToys'>Add A Toy</Link></li>
-            </> : <></>
-        }
+        <li><Link to='/allToys'>All Toys</Link></li>
+        <li><Link to='/myToys'>My Toys</Link></li>
+        <li><Link to='/addToys'>Add A Toy</Link></li>
     </>;
 
     const handleSignOut = () => {

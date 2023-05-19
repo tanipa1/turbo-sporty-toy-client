@@ -1,6 +1,7 @@
 .arrow{
     background-color: #01b0ed;
     border: 3px solid white;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
 }
 .arrow:hover{
     background-color: #ff1276;
