@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Cricket from "./Cricket/Cricket";
 import Football from "./Football/Football";
+import Badminton from "./Badminton/Badminton";
 
 
 const ShopByCategory = () => {
@@ -36,7 +37,7 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                <div className="grid lg:grid-cols-3 gap-3 mx-4">
+                    <div className="grid lg:grid-cols-3 gap-3 mx-4">
                         {
                             toys.filter(filteredToy => filteredToy.category === "football").map(toy => <Football
                                 key={toy._id}
@@ -46,7 +47,14 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 3</h2>
+                    <div className="grid lg:grid-cols-3 gap-3 mx-4">
+                        {
+                            toys.filter(filteredToy => filteredToy.category === "badminton").map(toy => <Badminton
+                                key={toy._id}
+                                toy={toy}
+                            ></Badminton>)
+                        }
+                    </div>
                 </TabPanel>
             </Tabs>
         </div>
