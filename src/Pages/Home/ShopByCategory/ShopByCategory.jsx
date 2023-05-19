@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import Cricket from "./Cricket/Cricket";
+import Football from "./Football/Football";
 
 
 const ShopByCategory = () => {
@@ -12,23 +14,36 @@ const ShopByCategory = () => {
     }, []);
 
     return (
-        <div className="mx-24 my-20">
+        <div className="mx-auto lg:px-24 my-20">
             <div className="text-center">
                 <p><small className="font-serif text-[#ff1276] tracking-widest">TRENDING PRODUCTS</small></p>
                 <h1 className="mb-6">SHOP BY CATEGORY</h1>
-                <p>Product: {toys.length}</p>
             </div>
             <Tabs>
-                <TabList className='flex justify-around'>
+                <TabList className='lg:flex justify-around lg:mx-0 mx-20 mb-8'>
                     <Tab><button className="btn arrow rounded-3xl tracking-widest">Cricket Toy</button></Tab>
                     <Tab><button className="btn arrow rounded-3xl tracking-wider">Football Toy</button></Tab>
                     <Tab><button className="btn arrow rounded-3xl">Badminton Toy</button></Tab>
                 </TabList>
                 <TabPanel>
-                    <h2>Any content 1</h2>
+                    <div className="grid lg:grid-cols-3 gap-3 mx-4">
+                        {
+                            toys.filter(filteredToy => filteredToy.category === "cricket").map(toy => <Cricket
+                                key={toy._id}
+                                toy={toy}
+                            ></Cricket>)
+                        }
+                    </div>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 2</h2>
+                <div className="grid lg:grid-cols-3 gap-3 mx-4">
+                        {
+                            toys.filter(filteredToy => filteredToy.category === "football").map(toy => <Football
+                                key={toy._id}
+                                toy={toy}
+                            ></Football>)
+                        }
+                    </div>
                 </TabPanel>
                 <TabPanel>
                     <h2>Any content 3</h2>
