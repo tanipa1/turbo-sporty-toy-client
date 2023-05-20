@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const AddToys = () => {
+
+    const { user } = useContext(AuthContext)
 
     const handleAddToy = event => {
         event.preventDefault();
@@ -19,7 +23,7 @@ const AddToys = () => {
             toy_name: name,
             price,
             seller_name: sellerName,
-            email,
+            seller_email: email,
             category,
             img: photo,
             rating,
@@ -80,7 +84,7 @@ const AddToys = () => {
                     </div>
                     <div className="flex items-center gap-3">
                         <p className="font-mono">Email</p>
-                        <input className="input input-bordered" type="email" name="email" placeholder="Enter Your Email" id="" />
+                        <input className="input input-bordered" type="email" name="email" defaultValue={user?.email}  placeholder="Enter Your Email" id="" />
                     </div>
                 </div>
                 <div className="flex gap-12 mb-6">

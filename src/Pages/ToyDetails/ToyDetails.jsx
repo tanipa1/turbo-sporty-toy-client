@@ -28,8 +28,7 @@ const ToyDetails = () => {
                             <div className="flex justify-between">
                                 <p className="btn btn-sm arrow rounded-3xl"><span className="font-bold">Price:  </span> ${price}</p>
                                 <p className="btn btn-sm arrow rounded-3xl"><span className="font-bold">Rating:  </span> {rating}</p>
-                            </div>
-                            
+                            </div>                           
                         </div>
                     </div>
                 </div>
