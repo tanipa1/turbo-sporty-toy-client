@@ -7,12 +7,8 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading) {
-        <button className="btn arrow">
-            <svg className="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
-                
-            </svg>
-            Loading...
-        </button>
+        return <progress className="m-24 progress h-6 w-56"></progress>
+
     }
     if (user) {
         return children;
