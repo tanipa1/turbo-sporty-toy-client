@@ -105,7 +105,7 @@ const AddToys = () => {
                 </div>
                 <div className="flex items-center gap-3">
                     <p className="font-mono">Description</p>
-                    <textarea className="input input-bordered h-[100px] mr-10 w-full" name="description" id="" cols="10" rows="10"></textarea>
+                    <textarea className="textarea textarea-bordered h-[100px] mr-10 w-full" name="description" id="" cols="10" rows="10"></textarea>
                 </div>
                 <div className="form-control w-1/2 mt-6 mx-auto">
                     <input type="submit" className="btn font-serif text-lg arrow rounded-3xl" value="Add  Toy" />
