@@ -4,7 +4,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const Registration = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
 
     const handleRegister = event => {
         event.preventDefault();
@@ -29,7 +29,14 @@ const Registration = () => {
             })
             .catch(error => {
                 console.log(error.message);
+            });
+
+        updateUserProfile(name, photo)
+            .then(() => {
             })
+            .catch(error => {
+                console.log(error.message);
+            });
     }
 
     return (
