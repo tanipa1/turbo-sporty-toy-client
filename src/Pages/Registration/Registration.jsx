@@ -2,8 +2,10 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import useTitle from "../../hooks/useTitle";
 
 const Registration = () => {
+    useTitle('Sign Up');
     const { createUser, updateUserProfile } = useContext(AuthContext);
 
     const handleRegister = event => {

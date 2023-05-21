@@ -1,6 +1,8 @@
+import useTitle from '../../hooks/useTitle';
 import './Blog.css';
 
 const Blog = () => {
+    useTitle('Blogs');
     return (
         <div>
             {/* Banner */}

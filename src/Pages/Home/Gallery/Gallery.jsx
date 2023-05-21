@@ -14,7 +14,7 @@ const Gallery = () => {
                 <p>A gallery of playfulness and joy</p>
 
                 <div data-aos="fade-up"
-                    data-aos-duration="3000" className='my-8 lg:mx-44 grid justify-center lg:grid-cols-3 gap-3'>
+                    data-aos-duration="2000" className='my-8 lg:mx-44 grid justify-center lg:grid-cols-3 gap-3'>
 
                     <div className="image-container mask mask-squircle m-0">
                         <img src={gallery1} className="max-w-sm  shadow-2xl" />
