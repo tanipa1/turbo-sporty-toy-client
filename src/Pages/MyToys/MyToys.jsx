@@ -51,22 +51,38 @@ const MyToys = () => {
                                 'success'
                             )
                             const remaining = toys.filter(toy => toy._id !== _id)
-                            setToys(remaining);                                         
+                            setToys(remaining);
                         }
                     })
             }
         })
     }
 
+
     return (
         <div className="mx-28 my-12 shadow-2xl">
-            {
-                toys.map(toy => <MyToy
-                    key={toy._id}
-                    toy={toy}
-                    handleDelete={handleDelete}
-                ></MyToy>)
-            }
+            <table className="table w-full">
+                {/* head */}
+                <thead>
+                    <tr>
+                        <th>
+
+                        </th>
+                        <th>Toy Info</th>
+                        <th>Category</th>
+                        <th>Seller Info</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                {
+                    toys.map(toy => <MyToy
+                        key={toy._id}
+                        toy={toy}
+                        handleDelete={handleDelete}
+                    ></MyToy>)
+                }
+            </table>
         </div>
     );
 };
