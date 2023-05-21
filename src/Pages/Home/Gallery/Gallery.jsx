@@ -13,7 +13,8 @@ const Gallery = () => {
                 <h2 className="text-3xl lg:font-bold">Our <span className="text-[#ff1276]">Gallery</span></h2>
                 <p>A gallery of playfulness and joy</p>
 
-                <div className='my-8 lg:mx-44 grid justify-center lg:grid-cols-3 gap-3'>
+                <div data-aos="fade-up"
+                    data-aos-duration="3000" className='my-8 lg:mx-44 grid justify-center lg:grid-cols-3 gap-3'>
 
                     <div className="image-container mask mask-squircle m-0">
                         <img src={gallery1} className="max-w-sm  shadow-2xl" />
@@ -46,8 +47,8 @@ const Gallery = () => {
                     <div className="image-container mask mask-squircle m-0">
                         <img src={gallery5} className="max-w-sm  shadow-2xl" />
                         <div className="overlay">
-                            <span className="overlay-text px-2">Inspiring 
-                            <br /> imagination through captivating visuals</span>
+                            <span className="overlay-text px-2">Inspiring
+                                <br /> imagination through captivating visuals</span>
                         </div>
                     </div>
 

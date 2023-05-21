@@ -6,7 +6,7 @@ import ShopByCategory from "../ShopByCategory/ShopByCategory";
 
 const Home = () => {
     return (
-        <div>
+        <div data-aos="fade-up" data-aos-duration="2000">
             <Header></Header>
             <Gallery></Gallery>
             <ShopByCategory></ShopByCategory>
