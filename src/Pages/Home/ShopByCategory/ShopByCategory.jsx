@@ -9,7 +9,7 @@ const ShopByCategory = () => {
     const [toys, setToys] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://turbo-sporty-toy-server.vercel.app/toys')
             .then((response) => response.json())
             .then((data) => setToys(data));
     }, []);

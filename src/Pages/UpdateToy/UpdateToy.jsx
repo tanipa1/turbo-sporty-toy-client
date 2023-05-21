@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 const UpdateToy = () => {
     // const [updatedToy, setUpdatedToy] = useState();
     const toy = useLoaderData();
-    const { toy_name, _id,  } = toy;
+    const { toy_name, _id, price, quantity, description } = toy;
 
     const handleUpdateToy = event =>{
         event.preventDefault();
@@ -17,7 +17,7 @@ const UpdateToy = () => {
         const updateToy = {price, quantity, description}
         // console.log(updateToy);
 
-        fetch(`http://localhost:5000/toys/${_id}`, {
+        fetch(`https://turbo-sporty-toy-server.vercel.app/toys/${_id}`, {
             method:'PUT',
             headers: {
                 'content-type' : 'application/json'
@@ -53,16 +53,16 @@ const UpdateToy = () => {
                 <div className="flex gap-12 mb-6">
                     <div className="flex items-center gap-10">
                         <p className="font-mono">Quantity</p>
-                        <input className="input input-bordered" type="text" name="quantity" placeholder="Available Quantity" id="" />
+                        <input className="input input-bordered" type="text" name="quantity" defaultValue={quantity} placeholder="Available Quantity" id="" />
                     </div>
                     <div className="flex items-center gap-3">
                         <p className="font-mono">Price</p>
-                        <input className="input input-bordered" type="text" name="price" placeholder="$ Price" id="" />
+                        <input className="input input-bordered" type="text" name="price" defaultValue={price} placeholder="$ Price" id="" />
                     </div>
                 </div>
                 <div className="flex items-center gap-3">
                     <p className="font-mono">Description</p>
-                    <textarea className="textarea textarea-bordered h-[100px] mr-10 w-full" placeholder="About You Toy..." name="description" id="" cols="10" rows="10"></textarea>
+                    <textarea className="textarea textarea-bordered h-[100px] mr-10 w-full" defaultValue={description} placeholder="About You Toy..." name="description" id="" cols="10" rows="10"></textarea>
                 </div>
                 <div className="form-control w-1/2 mt-6 mx-auto">
                     <input type="submit" className="btn font-serif text-lg arrow rounded-3xl" value="Update Toy" />

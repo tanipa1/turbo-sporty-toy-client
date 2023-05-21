@@ -9,7 +9,7 @@ const MyToys = () => {
     const [toys, setToys] = useState([]);
     const navigate = useNavigate();
 
-    const url = `http://localhost:5000/toys?seller_email=${user.email}`;
+    const url = `https://turbo-sporty-toy-server.vercel.app/toys?seller_email=${user.email}`;
 
     useEffect(() => {
         fetch(url, {
@@ -38,7 +38,7 @@ const MyToys = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/toys/${_id}`, {
+                fetch(`https://turbo-sporty-toy-server.vercel.app/toys/${_id}`, {
                     method: "DELETE",
                 })
                     .then(res => res.json())

@@ -36,7 +36,7 @@ const Feedback = () => {
                     </div>
                     <p className="text-center">"Always impressed with the latest football toys, great quality, and fast shipping. My go-to site for football toys." <br /><br />  <b>-Emily T. (Soccer Player)</b></p>
                 </div>
-            </div>
+            </div>  
         </div>
     );
 };
