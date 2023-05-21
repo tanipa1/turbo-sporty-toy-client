@@ -100,11 +100,11 @@ const AddToys = () => {
                 <div className="flex gap-10 mb-6">
                     <div className="flex items-center gap-10">
                         <p className="font-mono">Quantity</p>
-                        <input className="input input-bordered" type="text" name="quantity" placeholder="Toy Rating" id="" />
+                        <input className="input input-bordered" type="text" name="quantity" placeholder="Available Toy" id="" />
                     </div>
                     <div className="flex items-center gap-3">
                         <p className="font-mono">Rating</p>
-                        <input className="input input-bordered" type="text" name="rating" placeholder="Available Toy" id="" />
+                        <input className="input input-bordered" type="text" name="rating" placeholder="Toy Rating" id="" />
                     </div>
                 </div>
                 <div className="flex items-center gap-3">
