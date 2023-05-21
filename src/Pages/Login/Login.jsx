@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
@@ -9,7 +9,18 @@ const Login = () => {
     const { signIn, googleSignIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/'
+    const from = location.state?.from?.pathname || '/';
+
+    useEffect(() => {
+        if (from !== '/') {
+            Swal.fire({
+                title: 'You have to Login first',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            })
+        }
+      }, []);
+    
 
     const handleSignIn = event =>{
         event.preventDefault();
