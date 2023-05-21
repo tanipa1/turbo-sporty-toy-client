@@ -10,7 +10,7 @@ const Gallery = () => {
     return (
         <div>
             <div className="text-center mt-12">
-                <h2 className="text-3xl ">Our <span className="text-[#ff1276]">Gallery</span></h2>
+                <h2 className="text-3xl lg:font-bold">Our <span className="text-[#ff1276]">Gallery</span></h2>
                 <p>A gallery of playfulness and joy</p>
 
                 <div className='my-8 lg:mx-44 grid justify-center lg:grid-cols-3 gap-3'>
